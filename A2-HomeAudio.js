@@ -4,13 +4,15 @@ if (annyang) {
     "Hello.": () => {
       alert("Hello World!");
     },
+    // Changing page color
     "change the color to *color": (color) => {
       const cleanColor = color
         .trim()
         .toLowerCase()
-        .replace(/[^\w\s]/gi, ""); // remove punctuation
+        .replace(/[^\w\s]/gi, ""); 
       document.body.style.backgroundColor = cleanColor;
     },
+    // Navigating page
     "navigate to *page": (page) => {
       const lowercase = page.toLowerCase();
       if (lowercase.includes("home")) window.location.href = "A2-Home.html";

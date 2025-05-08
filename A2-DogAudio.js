@@ -4,6 +4,7 @@ if (annyang) {
       "Hello.": () => {
         alert("Hello World!");
       },
+      // Changing page color
       "change the color to *color": (color) => {
         const cleanColor = color
           .trim()
@@ -11,6 +12,7 @@ if (annyang) {
           .replace(/[^\w\s]/gi, "");
         document.body.style.backgroundColor = cleanColor;
       },
+      // Navigating page
       "navigate to *page": (page) => {
         const lowercase = page.toLowerCase();
         if (lowercase.includes("home"))
@@ -20,6 +22,7 @@ if (annyang) {
         else if (lowercase.includes("stocks"))
           window.location.href = "A2-Stocks.html";
       },
+      // Loading up dog
       "load *dog": (dog) => {
         const cleanDog = dog
           .trim()
